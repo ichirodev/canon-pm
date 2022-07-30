@@ -10,6 +10,15 @@ public class Response {
         this.title = title;
         this.description = description;
     }
+    private Response(long errorCode, String title, String description, String moreDetails) {
+        this.title = title;
+        this.description = description;
+        this.moreDetails = moreDetails;
+        this.errorCode = errorCode;
+    }
+    public static Response ResponseError(long errorCode, String title, String description, String moreDetails) {
+        return new Response(errorCode, title, description, moreDetails);
+    }
 
     public String getTitle() {
         return title;
