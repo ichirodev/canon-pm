@@ -1,0 +1,112 @@
+.dark-sc{
+    background-color: rgb(36, 36, 36);
+    color:rgb(235, 235, 235);
+    border-color: rgb(29, 29, 29);
+    box-shadow: 0px 0px 20px -5px black;
+    margin-top: 15px;
+}
+
+.light-sc{
+    background-color: rgb(218, 218, 218);
+    color: rgb(33, 33, 33);
+    border-color: rgb(182, 182, 182);
+    box-shadow: 0px 0px 20px -12px rgb(61, 61, 61);
+    margin-top: 15px;
+}
+
+.dark-text{
+    color:rgb(235, 235, 235);
+}
+
+.light-text{
+    color: rgb(33, 33, 33);
+}
+
+.dark-bg{
+    background-color: rgb(49, 49, 49);
+}
+
+.light-bg{
+    background-color: rgb(239, 239, 239);
+}
+
+.button{
+    font-size: large;
+    border: none;
+    border-radius: 6px;
+    min-width: 100px;
+    min-height: 30px;
+    margin-left: 4px;
+    margin-right: 4px;
+    box-shadow: 0 0 10px -6px black;
+}
+
+.round-button{
+    font-size: large;
+    border: none;
+    border-radius: 100%;
+    margin-left: 4px;
+    margin-right: 4px;
+    box-shadow: 0 0 10px -6px black;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 6px;
+}
+
+.light-transparent-button{
+    background-color: transparent;
+    font-size: large;
+    min-width: fit-content;
+    min-height: 30px;
+    border: none;
+    color: rgb(27, 27, 27);
+}
+
+.dark-transparent-button{
+    background-color: transparent;
+    font-size: large;
+    min-width: fit-content;
+    min-height: 30px;
+    border: none;
+    color: rgb(241, 241, 241);
+}
+
+.light-button{
+    background-color: rgb(210, 213, 217);
+    color: rgb(77, 77, 77);
+}
+
+.light-confirm-button{
+    background-color: rgb(138, 204, 118);
+    color: rgb(45, 42, 42);
+}
+
+.light-warning-button{
+    background-color: rgb(231, 71, 103);
+    color: rgb(45, 42, 42);
+}
+
+.light-cancel-button{
+    background-color: rgb(244, 197, 89);
+    color: rgb(45, 42, 42);
+}
+
+.dark-button{
+    background-color: rgb(36, 36, 36);
+    color: rgb(236, 236, 236);
+}
+
+.dark-confirm-button{
+    background-color: rgb(44, 161, 210);
+    color: rgb(236, 236, 236);
+}
+
+.dark-warning-button{
+    background-color: rgb(255, 19, 66);
+    color: rgb(236, 236, 236);
+}
+
+.dark-cancel-button{
+    background-color: rgb(127, 60, 181);
+    color: rgb(236, 236, 236);
+}
