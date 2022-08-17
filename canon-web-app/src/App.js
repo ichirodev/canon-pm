@@ -2,9 +2,7 @@ import './style/colors.css';
 import './App.css';
 
 import { useRef, useState } from 'react';
-import { Route } from 'react-router-dom';
 import { MdAccountCircle, MdDarkMode, MdLibraryAdd, MdLightMode, MdLogout, MdKeyboardBackspace } from 'react-icons/md';
-
 import SecretsList from './pages/SecretsList/SecretsList.js';
 import Creator from './pages/Creator/Creator';
 
@@ -12,7 +10,9 @@ function App() {
   const [color, setColor] = useState("dark");
   const [filter, setFilter] = useState("");
   const [page, setPage] = useState("home");
+
   const searchCriteria = useRef(null);
+  
   const topBarIconSize = 24;
 
   const invertColorTheme = () => {

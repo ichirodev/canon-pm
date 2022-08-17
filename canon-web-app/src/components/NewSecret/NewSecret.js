@@ -1,7 +1,9 @@
 import './NewSecret.css';
 import '../../style/colors.css';
 
-function NewSecret({color}) {
+function NewSecret() {
+    const color = "dark";
+
     return (
         <div className={"new-secret " + color + "-sc"}>
             <h3>New secret</h3>

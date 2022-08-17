@@ -1,0 +1,7 @@
+hr.dark-separator{
+    color: rgba(38, 38, 38, 0.844);
+}
+
+hr.light-separator{
+    color: rgba(61, 61, 61, 0.233);
+}
