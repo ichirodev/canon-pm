@@ -5,8 +5,10 @@ import { useRef, useState } from 'react';
 import { MdAccountCircle, MdDarkMode, MdLibraryAdd, MdLightMode, MdLogout, MdKeyboardBackspace } from 'react-icons/md';
 import SecretsList from './pages/SecretsList/SecretsList.js';
 import Creator from './pages/Creator/Creator';
+import LogIn from './pages/LogIn/LogIn';
 
 function App() {
+  const [logged, setLogged] = useState(false);
   const [color, setColor] = useState("dark");
   const [filter, setFilter] = useState("");
   const [page, setPage] = useState("home");
@@ -22,6 +24,12 @@ function App() {
   const submitSearchCriteria = event => {
     event.preventDefault();
     setFilter(searchCriteria.current.value);
+  }
+
+  function renderLogInPage() {
+    return (
+      <LogIn/>
+    );
   }
 
   function renderPageContent(_page) {
@@ -90,35 +98,43 @@ function App() {
     return <h1>Page not found</h1>
   }
 
+  function renderApp() {
+    return (
+      <>
+        <div className={"app-top-bar " + color + "-top-bar"}>
+          <div id="canon-header-logo" className="app-top-logo">
+          Canon
+          </div>
+
+          <div id="user-settings" className="app-user-settings">
+            <button onClick={invertColorTheme} className={"transparent-button " + color + "-transparent-button"}>
+              {color === "dark" ? <MdDarkMode size={topBarIconSize}/> : <MdLightMode size={topBarIconSize}/>}
+            </button>
+            <button className={"transparent-button " + color + "-transparent-button"}>
+              <MdAccountCircle size={topBarIconSize}/>
+            </button>
+            <button className={"transparent-button " + color + "-transparent-button"}>
+              <MdLogout size={topBarIconSize}/>
+            </button>
+          </div>
+        </div>
+
+        {renderPageContent(page)}
+
+        <div className={"app-actions"}>
+          {renderPageActions(page)} 
+        </div>
+
+        <div className={"app-footer " + color + "-footer"}>
+          Footer
+        </div>
+      </>
+    )
+  }
+
   return (
     <div className={"app " + color + "-bg"}>
-      <div className={"app-top-bar " + color + "-top-bar"}>
-        <div id="canon-header-logo" className="app-top-logo">
-        Canon
-        </div>
-
-        <div id="user-settings" className="app-user-settings">
-          <button onClick={invertColorTheme} className={"transparent-button " + color + "-transparent-button"}>
-            {color === "dark" ? <MdDarkMode size={topBarIconSize}/> : <MdLightMode size={topBarIconSize}/>}
-          </button>
-          <button className={"transparent-button " + color + "-transparent-button"}>
-            <MdAccountCircle size={topBarIconSize}/>
-          </button>
-          <button className={"transparent-button " + color + "-transparent-button"}>
-            <MdLogout size={topBarIconSize}/>
-          </button>
-        </div>
-      </div>
-
-      {renderPageContent(page)}
-
-      <div className={"app-actions"}>
-        {renderPageActions(page)} 
-      </div>
-
-      <div className={"app-footer " + color + "-footer"}>
-        Footer
-      </div>
+      {logged ? renderApp() : renderLogInPage()}
     </div>
   );
 }

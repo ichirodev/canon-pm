@@ -1,0 +1,24 @@
+.log-in{
+    height: 100vh;
+    min-width: 500px;
+    font-size: large;
+    justify-content: center;
+}
+
+.log-in-card{
+    padding: 18px;
+    border-radius: 8px;
+    margin-top: 10vh;
+}
+
+input {
+    width: 100%;    
+    background-color: rgba(44, 44, 44, 0.596);
+    border: unset;
+    border-radius: 4px;
+    height: 26px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: large;
+    color: rgb(245, 245, 245);
+}

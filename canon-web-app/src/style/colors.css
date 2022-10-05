@@ -110,3 +110,9 @@
     background-color: rgb(127, 60, 181);
     color: rgb(236, 236, 236);
 }
+
+.input-checkbox {
+    height: min-content;
+    width: min-content;
+    margin-left: 10px;
+}
